@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "partita": "Ronaldo Rovesciata (Goal Esotico)",
+    "immagine": "ronaldorovescita.jpg", 
+    "minutoEsatto": 64
+  },
+  {
+    "id": 2,
+    "partita": "Ibrahimović Rovesciata (Goal Spettacolare)",
+    "immagine": "ibra rovesciata.jpeg", 
+    "minutoEsatto": 91
+  },
+  {
+    "id": 3,
+    "partita": "Diego Maradona – 'Gol del secolo' (Argentina vs Inghilterra, 1986)",
+    "immagine": "goal maradona.jpg", 
+    "minutoEsatto": 55
+  },
+  {
+    "id": 4,
+    "partita": "Diego Maradona – 'La mano de Dios' (Argentina vs Inghilterra, 1986)",
+    "immagine": "goal maradona mano.jpg", 
+    "minutoEsatto": 51
+  },
+  {
+    "id": 5,
+    "partita": "Lionel Messi – Gol contro il Getafe (Copa del Rey, 2007)",
+    "immagine": "messi goal.jpg", 
+    "minutoEsatto": 28
+  },
+  {
+    "id": 6,
+    "partita": "Roberto Carlos – Punizione contro la Francia (Tournoi de France, 1997)",
+    "immagine": "robertocarlos.jpg", 
+    "minutoEsatto": 21
+  },
+  {
+    "id": 7,
+    "partita": "Zinedine Zidane – Volée Finale Champions League (Real Madrid vs Bayer Leverkusen, 2002)",
+    "immagine": "zidane goal.jpg", 
+    "minutoEsatto": 45
+  },
+  {
+    "id": 8,
+    "partita": "Ronaldo Nazário – Gol contro il Compostela (Barcellona, 1996)",
+    "immagine": "ronaldonazario.jpg",
+    "minutoEsatto": 36
+  },
+  {
+    "id": 9, 
+    "partita": "Marco Van Basten – Finale Euro ’88 (Olanda vs URSS, 1988)",
+    "immagine": "vanbasten.jpg", 
+    "minutoEsatto": 54
+  }
+]

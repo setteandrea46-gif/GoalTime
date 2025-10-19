@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ GOAL TIME GUESS - Indovina il Minuto</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="game-container">
+        <header>
+            <h1 class="logo">GOAL TIME GUESS</h1>
+            <p id="round-counter" class="round-info">Caricamento...</p> 
+        </header>
+        
+        <main class="round-display">
+            
+            <h2 id="descrizione-partita">In attesa di iniziare...</h2>
+            
+            <div class="image-box">
+                <img id="immagine-goal" src="" alt="Foto di un momento del Goal">
+            </div>
+
+            <div class="input-area">
+                
+                <input type="number" id="stima-input" placeholder="Minuto (1-120)" min="1" max="120" disabled>
+                
+                <button id="btn-verifica" class="action-button verify-button" style="display: none;">
+                    Indovina
+                </button>
+
+                <button id="btn-next" class="action-button next-button">
+                    INIZIA
+                </button>
+            </div>
+
+            <div id="risultato-feedback" class="feedback-box" style="display: none;">
+                </div>
+
+        </main>
+        
+        <footer class="score-display">
+            <p>Punteggio Totale: <span id="punteggio-totale">0</span> punti</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

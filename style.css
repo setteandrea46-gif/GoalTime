@@ -1,0 +1,143 @@
+/* --- RESET E LAYOUT BASE --- */
+body {
+    /* Font di base */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px 0;
+    
+    /* Centra il contenitore del gioco nella pagina */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    /* --- NUOVI STILI PER LO SFONDO --- */
+    background-image: url('campo da calcio.png'); /* Specifica il percorso dell'immagine */
+    background-size: cover; /* Copre l'intera area, ritagliando se necessario */
+    background-position: center center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
+    background-attachment: fixed; /* Mantiene l'immagine fissa durante lo scroll (opzionale) */
+}
+
+/* --- CONTENITORE PRINCIPALE --- */
+.game-container {
+    /* Dimensione massima e allineamento */
+    max-width: 500px;
+    width: 95%; /* Garantisce che sia reattivo su schermi piccoli */
+    background-color: white;
+    
+    /* Stile e spaziatura */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center; /* Allinea il contenuto centralmente */
+}
+
+/* --- HEADER E TESTI --- */
+.logo {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+.round-info {
+    font-size: 1.1em;
+    color: #008000; /* Verde per il contatore del round */
+    font-weight: bold;
+    margin-top: 0;
+}
+#descrizione-partita {
+    font-size: 1.4em;
+    margin: 15px 0 10px;
+    font-weight: 600;
+}
+
+/* --- IMMAGINE --- */
+.image-box {
+    margin: 15px 0;
+}
+#immagine-goal {
+    width: 100%;
+    max-height: 350px; /* Limita l'altezza per schermi più piccoli */
+    object-fit: cover; /* Assicura che l'immagine copra lo spazio senza distorcere */
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Placeholder visibile se l'immagine non è ancora caricata */
+    min-height: 150px; 
+    background-color: #eee;
+}
+
+/* --- AREA INPUT E PULSANTI --- */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+#stima-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Stile generale dei pulsanti */
+.action-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap; /* Evita che il testo vada a capo */
+}
+
+/* Pulsante "Indovina" */
+.verify-button {
+    background-color: #4CAF50; /* Verde standard */
+    color: white;
+}
+.verify-button:hover {
+    background-color: #45a049;
+}
+
+/* Pulsante "Next" e "INIZIA" */
+#btn-next {
+    background-color: #000; /* Nero come nell'esempio */
+    color: white;
+    width: 100%; /* Occupano tutta la larghezza quando sono attivi da soli */
+    padding: 15px 0; /* Un po' più grandi per enfasi */
+    margin-top: 15px;
+}
+#btn-next:hover {
+    background-color: #333;
+}
+
+/* --- FEEDBACK E RISULTATI --- */
+.feedback-box {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1.1em;
+}
+.feedback-box strong {
+    color: #1a73e8; /* Colore per evidenziare i numeri chiave */
+}
+
+/* --- FOOTER PUNTEGGIO --- */
+.score-display {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+}
+#punteggio-totale {
+    color: #cc0000; /* Colore rosso per il punteggio totale */
+}
