@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#101010"/><stop offset="1" stop-color="#303030"/></linearGradient>
+    <radialGradient id="light" cx="75%" cy="20%" r="70%"><stop offset="0" stop-color="#ff4d6d" stop-opacity="0.42"/><stop offset="1" stop-color="#ff4d6d" stop-opacity="0"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#light)"/>
+  <g opacity="0.18" stroke="#fff" stroke-width="8" fill="none">
+    <rect x="72" y="92" width="1056" height="616" rx="28"/>
+    <line x1="600" y1="92" x2="600" y2="708"/>
+    <circle cx="600" cy="400" r="108"/>
+    <rect x="72" y="250" width="155" height="300"/>
+    <rect x="973" y="250" width="155" height="300"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="50" y="54" width="540" height="600" rx="34" fill="#07110d" opacity="0.72"/>
+    <rect x="50" y="54" width="540" height="600" rx="34" fill="none" stroke="#fff" opacity="0.11"/>
+  </g>
+  <text x="62" y="94" fill="#ff4d6d" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" letter-spacing="5">GOAL TIME GUESS</text>
+  <text fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900"><tspan x="62" y="126">Gareth Bale</tspan></text>
+  <text fill="#d7e3dd" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700"><tspan x="62" y="334">Real Madrid vs Liverpool 2018</tspan><tspan x="62" y="361">(rovesciata)</tspan></text>
+  <g transform="translate(760 190)">
+    <circle cx="190" cy="190" r="146" fill="#f4f7f5"/>
+    <circle cx="190" cy="190" r="108" fill="#141414"/>
+    <polygon points="190,78 232,127 214,190 166,190 148,127" fill="#fff"/>
+    <polygon points="190,302 148,253 166,190 214,190 232,253" fill="#fff"/>
+    <polygon points="78,190 127,148 190,166 190,214 127,232" fill="#fff"/>
+    <polygon points="302,190 253,232 190,214 190,166 253,148" fill="#fff"/>
+    <circle cx="190" cy="190" r="36" fill="#ff4d6d"/>
+  </g>
+  <g transform="translate(765 585)">
+    <rect width="330" height="104" rx="24" fill="#ff4d6d"/>
+    <text x="165" y="43" text-anchor="middle" fill="#101810" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900">MINUTO ESATTO</text>
+    <text x="165" y="86" text-anchor="middle" fill="#101810" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900">64'</text>
+  </g>
+</svg>

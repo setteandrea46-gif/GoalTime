@@ -1,187 +1,215 @@
-// --- CONFIGURAZIONE GIOCO ---
 const PUNTEGGIO_MASSIMO = 5000;
-const MAX_DIFFERENZA_MINUTI = 15; // Errore massimo: se l'errore è 15 minuti o più, i punti sono 0.
-const NUMERO_ROUND = 9; // Gioca 9 round per partita
+const MAX_DIFFERENZA_MINUTI = 15;
+const NUMERO_ROUND = 9;
 
-// --- VARIABILI DI STATO ---
 let punteggioTotale = 0;
 let roundCorrente = 0;
-let goalSelezionati = []; // I goal casuali per la partita corrente
-let datiDiGioco = []; // Tutti i goal caricati dal JSON
+let goalSelezionati = [];
+let datiDiGioco = [];
 let partitaInCorso = false;
 
+const ui = {
+    round: document.getElementById('round-counter'),
+    progress: document.getElementById('progress-bar'),
+    progressTrack: document.querySelector('.progress-track'),
+    descrizione: document.getElementById('descrizione-partita'),
+    immagine: document.getElementById('immagine-goal'),
+    input: document.getElementById('stima-input'),
+    verifica: document.getElementById('btn-verifica'),
+    next: document.getElementById('btn-next'),
+    feedback: document.getElementById('risultato-feedback'),
+    punteggio: document.getElementById('punteggio-totale'),
+    roundDisplay: document.querySelector('.round-display')
+};
 
-// --- FUNZIONI DI UTILITÀ E LOGICA ---
-
-/**
- * Calcola i punti guadagnati in base a quanto la stima si avvicina al minuto esatto.
- * La vicinanza è lineare: più sei vicino, più i punti si avvicinano a 5000.
- * @returns {number} I punti guadagnati (int).
- */
 function calcolaPuntiMinuto(stimaUtente, minutoTarget) {
-    const differenza = Math.abs(stimaUtente - minutoTarget); 
-    
-    if (differenza === 0) {
-        return PUNTEGGIO_MASSIMO; // Perfetto!
-    } 
-    
-    if (differenza >= MAX_DIFFERENZA_MINUTI) {
-        return 0; // Troppo lontano
-    }
-    
-    // Formula lineare: Punti = MaxPunti * (1 - frazioneErrore)
-    const frazioneErrore = differenza / MAX_DIFFERENZA_MINUTI;
-    let punti = PUNTEGGIO_MASSIMO * (1.0 - frazioneErrore);
-    
-    return Math.round(punti); 
+    const differenza = Math.abs(stimaUtente - minutoTarget);
+    if (differenza === 0) return PUNTEGGIO_MASSIMO;
+    if (differenza >= MAX_DIFFERENZA_MINUTI) return 0;
+    return Math.round(PUNTEGGIO_MASSIMO * (1 - differenza / MAX_DIFFERENZA_MINUTI));
 }
 
-/**
- * 1. Carica i dati dal file goals.json.
- */
-async function caricaDati() {
-    try {
-        // NOTA: 'fetch' richiede che la pagina sia servita da un server (localhost:8000)
-        const response = await fetch('./data/goals.json'); 
-        if (!response.ok) {
-            throw new Error(`Errore HTTP: ${response.status}. Assicurati di essere su localhost.`);
-        }
-        datiDiGioco = await response.json();
-
-        if (datiDiGioco.length < NUMERO_ROUND) {
-            document.getElementById('round-counter').textContent = "ERRORE: Dati insufficienti in goals.json.";
-            return;
-        }
-
-        // Dati caricati, pronto per l'avvio
-        document.getElementById('round-counter').textContent = `Pronto a giocare ${NUMERO_ROUND} round!`;
-        document.getElementById('descrizione-partita').textContent = "Premi INIZIA per iniziare la sfida.";
-        document.getElementById('stima-input').disabled = false;
-
-    } catch (error) {
-        console.error("Errore nel caricamento dei dati:", error);
-        document.getElementById('descrizione-partita').textContent = "ERRORE CRITICO: Controlla la console per i dettagli (F12).";
+function mescola(array) {
+    const copia = [...array];
+    for (let i = copia.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copia[i], copia[j]] = [copia[j], copia[i]];
     }
+    return copia;
 }
 
-/**
- * 2. Inizializza una nuova partita.
- */
-function iniziaGioco() {
-    if (datiDiGioco.length === 0) {
-        alert("Dati non ancora caricati. Riprova tra un attimo o controlla il file goals.json.");
+function aggiornaProgresso(valore) {
+    const percentuale = Math.min(100, (valore / NUMERO_ROUND) * 100);
+    ui.progress.style.width = `${percentuale}%`;
+    ui.progressTrack.setAttribute('aria-valuenow', String(valore));
+}
+
+function animaElemento(elemento, classe) {
+    elemento.classList.remove(classe);
+    void elemento.offsetWidth;
+    elemento.classList.add(classe);
+}
+
+function aggiornaPunteggio() {
+    ui.punteggio.textContent = punteggioTotale.toLocaleString('it-IT');
+    animaElemento(ui.punteggio, 'score-pop');
+}
+
+function mostraMessaggio(titolo, testo, tipo = 'info') {
+    ui.feedback.className = `feedback-box feedback-${tipo}`;
+    ui.feedback.innerHTML = `<p class="feedback-title">${titolo}</p><p>${testo}</p>`;
+    ui.feedback.style.display = 'block';
+    animaElemento(ui.feedback, 'feedback-enter');
+}
+
+function caricaDati() {
+    datiDiGioco = Array.isArray(window.GOAL_DATA) ? window.GOAL_DATA : [];
+
+    if (datiDiGioco.length < NUMERO_ROUND) {
+        ui.round.textContent = 'DATI NON DISPONIBILI';
+        ui.descrizione.textContent = 'Impossibile caricare la partita';
+        ui.next.disabled = true;
+        mostraMessaggio('Qualcosa non va', 'I dati dei gol non sono disponibili. Ricarica la pagina.', 'error');
         return;
     }
-    
-    // Mescola i goal e ne prende il numero necessario per il gioco
-    goalSelezionati = datiDiGioco
-                        .sort(() => 0.5 - Math.random()) 
-                        .slice(0, NUMERO_ROUND); 
 
+    ui.round.textContent = `${NUMERO_ROUND} ROUND · PRONTO`;
+    ui.descrizione.textContent = 'Quanto conosci i gol che hanno fatto la storia?';
+    ui.next.disabled = false;
+}
+
+function iniziaGioco() {
+    if (datiDiGioco.length < NUMERO_ROUND) {
+        mostraMessaggio('Dati non disponibili', 'Ricarica la pagina e riprova.', 'error');
+        return;
+    }
+
+    goalSelezionati = mescola(datiDiGioco).slice(0, NUMERO_ROUND);
     punteggioTotale = 0;
     roundCorrente = 0;
     partitaInCorso = true;
-    
-    // Collega il pulsante "Next" alla funzione di avanzamento
-    document.getElementById('btn-next').onclick = vaiAlProssimoRound;
-    
+    aggiornaPunteggio();
+    aggiornaProgresso(0);
+    ui.next.onclick = vaiAlProssimoRound;
     vaiAlProssimoRound();
 }
 
-
-/**
- * 3. Prepara e mostra l'interfaccia per il round successivo.
- */
 function vaiAlProssimoRound() {
     if (roundCorrente >= NUMERO_ROUND) {
         mostraRisultatoFinale();
         return;
     }
-    
-    roundCorrente++;
+
+    roundCorrente += 1;
     const goalCorrente = goalSelezionati[roundCorrente - 1];
-    
-    // --- Aggiornamento dell'Interfaccia (collegamento con home.html) ---
-    
-    document.getElementById('round-counter').textContent = `Round ${roundCorrente}/${NUMERO_ROUND}`;
-    // Costruisce il percorso completo dell'immagine
-    document.getElementById('immagine-goal').src = `./images/${goalCorrente.immagine}`; 
-    document.getElementById('descrizione-partita').textContent = goalCorrente.partita;
-    document.getElementById('punteggio-totale').textContent = punteggioTotale;
-    
-    // Resetta input e pulsanti
-    document.getElementById('stima-input').value = '';
-    document.getElementById('stima-input').disabled = false;
-    document.getElementById('btn-verifica').style.display = 'block'; 
-    document.getElementById('btn-next').style.display = 'none'; 
-    document.getElementById('risultato-feedback').style.display = 'none';
-    document.getElementById('btn-next').textContent = "Next"; 
+
+    ui.round.textContent = `ROUND ${roundCorrente} / ${NUMERO_ROUND}`;
+    ui.descrizione.textContent = goalCorrente.partita;
+    ui.immagine.classList.add('image-loading');
+    ui.immagine.onload = () => ui.immagine.classList.remove('image-loading');
+    ui.immagine.src = `./images/${goalCorrente.immagine}`;
+    ui.immagine.alt = `Gol: ${goalCorrente.partita}`;
+    ui.input.value = '';
+    ui.input.style.display = 'block';
+    ui.input.disabled = false;
+    ui.verifica.style.display = 'block';
+    ui.next.style.display = 'none';
+    ui.next.classList.remove('full-width-action');
+    ui.feedback.style.display = 'none';
+    aggiornaProgresso(roundCorrente);
+    animaElemento(ui.roundDisplay, 'round-enter');
 }
 
-
-/**
- * 4. Gestisce il click su "Indovina".
- */
 function verificaStima() {
-    const goalCorrente = goalSelezionati[roundCorrente - 1];
-    const inputElement = document.getElementById('stima-input');
-    const stimaUtente = parseInt(inputElement.value);
+    const stimaUtente = Number.parseInt(ui.input.value, 10);
 
-    // Validazione
-    if (isNaN(stimaUtente) || stimaUtente < 1 || stimaUtente > 120) {
-        alert("Inserisci un minuto valido compreso tra 1 e 120.");
+    if (Number.isNaN(stimaUtente) || stimaUtente < 1 || stimaUtente > 125) {
+        mostraMessaggio('Inserisci un minuto valido', 'Scegli un numero compreso tra 1 e 125.', 'error');
+        animaElemento(ui.input, 'input-error');
         return;
     }
 
+    const goalCorrente = goalSelezionati[roundCorrente - 1];
+    const differenza = Math.abs(stimaUtente - goalCorrente.minutoEsatto);
     const puntiRound = calcolaPuntiMinuto(stimaUtente, goalCorrente.minutoEsatto);
     punteggioTotale += puntiRound;
-    const differenza = Math.abs(stimaUtente - goalCorrente.minutoEsatto);
 
-    // --- Aggiornamento del Feedback ---
-    const feedbackDiv = document.getElementById('risultato-feedback');
-    feedbackDiv.innerHTML = `
-        <p>Minuto Reale: <strong>${goalCorrente.minutoEsatto}</strong></p>
-        <p>La tua stima: <strong>${stimaUtente}</strong></p>
-        <p>Differenza: ${differenza} minuti</p>
-        <p>Punti guadagnati in questo round: <strong>${puntiRound}</strong></p>
-    `;
-    feedbackDiv.style.display = 'block';
+    let giudizio = 'Tiro fuori misura';
+    let icona = '↗';
+    let tipo = 'miss';
+    if (differenza === 0) {
+        giudizio = 'Minuto perfetto!';
+        icona = '★';
+        tipo = 'perfect';
+    } else if (differenza <= 2) {
+        giudizio = 'Quasi perfetto!';
+        icona = '🔥';
+        tipo = 'perfect';
+    } else if (differenza <= 5) {
+        giudizio = 'Ottima intuizione';
+        icona = '✓';
+        tipo = 'good';
+    }
 
-    document.getElementById('punteggio-totale').textContent = punteggioTotale;
+    ui.feedback.className = `feedback-box feedback-${tipo}`;
+    ui.feedback.innerHTML = `
+        <div class="result-heading"><span class="result-icon">${icona}</span><span>${giudizio}</span></div>
+        <div class="result-grid">
+            <div><span>Minuto reale</span><strong>${goalCorrente.minutoEsatto}'</strong></div>
+            <div><span>La tua stima</span><strong>${stimaUtente}'</strong></div>
+            <div><span>Differenza</span><strong>${differenza} min</strong></div>
+            <div><span>Punti round</span><strong>+${puntiRound.toLocaleString('it-IT')}</strong></div>
+        </div>`;
+    ui.feedback.style.display = 'block';
+    animaElemento(ui.feedback, 'feedback-enter');
 
-    // Disabilita input e mostra "Next"
-    inputElement.disabled = true;
-    document.getElementById('btn-verifica').style.display = 'none';
-    document.getElementById('btn-next').style.display = 'block'; 
+    aggiornaPunteggio();
+    ui.input.disabled = true;
+    ui.verifica.style.display = 'none';
+    ui.next.textContent = roundCorrente === NUMERO_ROUND ? 'VEDI RISULTATO →' : 'PROSSIMO GOL →';
+    ui.next.style.display = 'block';
 }
 
-
-/**
- * 5. Mostra il risultato finale.
- */
 function mostraRisultatoFinale() {
-    document.getElementById('descrizione-partita').textContent = `Partita conclusa! Complimenti!`;
-    document.getElementById('round-counter').textContent = "GIOCO TERMINATO";
-    
-    document.getElementById('btn-next').textContent = "GIOCA ANCORA";
-    document.getElementById('btn-next').onclick = iniziaGioco; 
-    document.getElementById('btn-next').style.display = 'block';
-    document.getElementById('btn-verifica').style.display = 'none';
-    document.getElementById('risultato-feedback').style.display = 'none';
-    
+    const massimoTotale = PUNTEGGIO_MASSIMO * NUMERO_ROUND;
+    const percentuale = Math.round((punteggioTotale / massimoTotale) * 100);
+    let titolo = 'Buona partita!';
+    let descrizione = 'Hai ancora qualche gol storico da ripassare.';
+
+    if (percentuale >= 80) {
+        titolo = 'Fuoriclasse assoluto!';
+        descrizione = 'Conosci i momenti decisivi come un vero telecronista.';
+    } else if (percentuale >= 55) {
+        titolo = 'Grande prestazione!';
+        descrizione = 'Ottimo fiuto per i minuti che hanno fatto la storia.';
+    }
+
+    ui.descrizione.textContent = titolo;
+    ui.round.textContent = 'PARTITA CONCLUSA';
+    ui.immagine.src = 'tempo.jpg';
+    ui.immagine.alt = 'Goal Time Guess';
+    ui.input.style.display = 'none';
+    ui.verifica.style.display = 'none';
+    ui.feedback.className = 'feedback-box feedback-final';
+    ui.feedback.innerHTML = `
+        <p class="final-score">${punteggioTotale.toLocaleString('it-IT')}</p>
+        <p class="final-label">punti su ${massimoTotale.toLocaleString('it-IT')}</p>
+        <div class="final-meter"><span style="width: ${percentuale}%"></span></div>
+        <p>${descrizione}</p>`;
+    ui.feedback.style.display = 'block';
+    ui.next.textContent = 'GIOCA ANCORA';
+    ui.next.onclick = iniziaGioco;
+    ui.next.style.display = 'block';
+    ui.next.classList.add('full-width-action');
     partitaInCorso = false;
-    // Rimuove l'immagine per non lasciare l'ultima del round
-    document.getElementById('immagine-goal').src = ""; 
+    aggiornaProgresso(NUMERO_ROUND);
+    animaElemento(ui.roundDisplay, 'round-enter');
 }
 
+ui.verifica.addEventListener('click', verificaStima);
+ui.next.onclick = iniziaGioco;
+ui.input.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && !ui.input.disabled && partitaInCorso) verificaStima();
+});
 
-// --- AVVIO E COLLEGAMENTO INIZIALE ---
-
-// 1. Avvia la funzione di caricamento dati quando la pagina è pronta
-document.addEventListener('DOMContentLoaded', caricaDati);
-
-// 2. Collega la funzione verificaStima al pulsante "Indovina" (btn-verifica)
-document.getElementById('btn-verifica').onclick = verificaStima;
-
-// 3. Collega la funzione iniziaGioco al pulsante "INIZIA" (btn-next)
-document.getElementById('btn-next').onclick = iniziaGioco;
+caricaDati();

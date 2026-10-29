@@ -1,143 +1,464 @@
-/* --- RESET E LAYOUT BASE --- */
+:root {
+    --bg: #07110d;
+    --panel: rgba(14, 29, 23, 0.88);
+    --text: #f6f8f7;
+    --muted: #9eb0a7;
+    --accent: #b9f227;
+    --border: rgba(255, 255, 255, 0.1);
+    --radius-lg: 28px;
+    --radius-md: 16px;
+    --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+}
+
+* { box-sizing: border-box; }
+
 body {
-    /* Font di base */
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 20px 0;
-    
-    /* Centra il contenitore del gioco nella pagina */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-
-    /* --- NUOVI STILI PER LO SFONDO --- */
-    background-image: url('campo da calcio.png'); /* Specifica il percorso dell'immagine */
-    background-size: cover; /* Copre l'intera area, ritagliando se necessario */
-    background-position: center center; /* Centra l'immagine */
-    background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
-    background-attachment: fixed; /* Mantiene l'immagine fissa durante lo scroll (opzionale) */
+    min-height: 100svh;
+    margin: 0;
+    padding: 32px 18px;
+    display: grid;
+    place-items: center;
+    color: var(--text);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, rgba(3, 12, 8, 0.93), rgba(4, 18, 12, 0.72)), url('campo da calcio.png') center / cover fixed;
+    overflow-x: hidden;
 }
 
-/* --- CONTENITORE PRINCIPALE --- */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(12px);
+    pointer-events: none;
+}
+
+body::before {
+    width: 360px;
+    height: 360px;
+    top: -170px;
+    right: -100px;
+    background: rgba(185, 242, 39, 0.16);
+}
+
+body::after {
+    width: 280px;
+    height: 280px;
+    bottom: -140px;
+    left: -100px;
+    background: rgba(0, 154, 92, 0.18);
+}
+
 .game-container {
-    /* Dimensione massima e allineamento */
-    max-width: 500px;
-    width: 95%; /* Garantisce che sia reattivo su schermi piccoli */
-    background-color: white;
-    
-    /* Stile e spaziatura */
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    text-align: center; /* Allinea il contenuto centralmente */
+    width: min(100%, 620px);
+    padding: 26px;
+    text-align: center;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
 }
 
-/* --- HEADER E TESTI --- */
-.logo {
-    font-size: 1.5em;
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 2px 2px 22px;
+}
+
+.progress-track {
+    height: 5px;
+    margin: -9px 3px 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-strong, #95d900), var(--accent));
+    border-radius: inherit;
+    box-shadow: 0 0 15px rgba(185, 242, 39, 0.5);
+    transition: width 0.5s cubic-bezier(.2, .8, .2, 1);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    text-align: left;
+}
+
+.brand-mark {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    color: #102007;
+    font-size: 23px;
+    background: var(--accent);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(185, 242, 39, 0.22);
+}
+
+.eyebrow {
+    margin: 0 0 3px;
+    color: var(--muted);
+    font-size: 0.68rem;
     font-weight: 800;
-    color: #333;
-    margin: 0 0 5px 0;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
 }
+
+.logo {
+    margin: 0;
+    font-size: clamp(1.05rem, 4vw, 1.35rem);
+    font-weight: 850;
+    letter-spacing: -0.035em;
+}
+
 .round-info {
-    font-size: 1.1em;
-    color: #008000; /* Verde per il contatore del round */
-    font-weight: bold;
-    margin-top: 0;
+    margin: 0;
+    padding: 9px 12px;
+    color: var(--accent);
+    font-size: 0.77rem;
+    font-weight: 800;
+    white-space: nowrap;
+    background: rgba(185, 242, 39, 0.09);
+    border: 1px solid rgba(185, 242, 39, 0.18);
+    border-radius: 999px;
 }
+
+.round-display {
+    padding: 8px;
+    background: rgba(4, 14, 9, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 22px;
+}
+
 #descrizione-partita {
-    font-size: 1.4em;
-    margin: 15px 0 10px;
-    font-weight: 600;
+    margin: 11px 12px 18px;
+    font-size: clamp(1.25rem, 4.4vw, 1.65rem);
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
 }
 
-/* --- IMMAGINE --- */
 .image-box {
-    margin: 15px 0;
-}
-#immagine-goal {
-    width: 100%;
-    max-height: 350px; /* Limita l'altezza per schermi più piccoli */
-    object-fit: cover; /* Assicura che l'immagine copra lo spazio senza distorcere */
-    border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    /* Placeholder visibile se l'immagine non è ancora caricata */
-    min-height: 150px; 
-    background-color: #eee;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    background: #09150f;
+    border-radius: var(--radius-md);
 }
 
-/* --- AREA INPUT E PULSANTI --- */
+.image-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    border-radius: inherit;
+}
+
+.image-badge {
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    left: 13px;
+    padding: 7px 10px;
+    color: #112008;
+    font-size: 0.63rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    background: rgba(185, 242, 39, 0.92);
+    border-radius: 8px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(8px);
+}
+
+#immagine-goal {
+    display: block;
+    width: 100%;
+    height: clamp(230px, 49vw, 350px);
+    object-fit: cover;
+    transition: transform 0.45s ease, opacity 0.25s ease;
+}
+
+#immagine-goal.image-loading {
+    opacity: 0.3;
+    transform: scale(1.025);
+}
+
+.image-box:hover #immagine-goal { transform: scale(1.02); }
+
 .input-area {
     display: flex;
+    align-items: stretch;
     gap: 10px;
-    margin-top: 20px;
-    align-items: center;
+    padding: 14px 6px 6px;
 }
+
 #stima-input {
-    flex-grow: 1;
-    padding: 12px 15px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    font-size: 1.1em;
+    min-width: 0;
+    flex: 1 1 auto;
+    padding: 15px 16px;
+    color: var(--text);
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 700;
     text-align: center;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
-/* Stile generale dei pulsanti */
+#stima-input::placeholder { color: #819189; }
+
+#stima-input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(185, 242, 39, 0.12);
+}
+
+#stima-input:disabled { opacity: 0.58; }
+
 .action-button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: bold;
+    min-height: 52px;
+    padding: 14px 24px;
+    border: 0;
+    border-radius: 13px;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 850;
+    letter-spacing: 0.025em;
     cursor: pointer;
-    transition: background-color 0.2s;
-    white-space: nowrap; /* Evita che il testo vada a capo */
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    white-space: nowrap;
 }
 
-/* Pulsante "Indovina" */
+.action-button:hover { transform: translateY(-2px); }
+.action-button:active { transform: translateY(0); }
+
+.action-button:focus-visible {
+    outline: 3px solid rgba(185, 242, 39, 0.4);
+    outline-offset: 3px;
+}
+
+.action-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
 .verify-button {
-    background-color: #4CAF50; /* Verde standard */
-    color: white;
+    color: #102007;
+    background: var(--accent);
+    box-shadow: 0 10px 24px rgba(185, 242, 39, 0.18);
 }
+
 .verify-button:hover {
-    background-color: #45a049;
+    background: #caff35;
+    box-shadow: 0 13px 28px rgba(185, 242, 39, 0.25);
 }
 
-/* Pulsante "Next" e "INIZIA" */
 #btn-next {
-    background-color: #000; /* Nero come nell'esempio */
-    color: white;
-    width: 100%; /* Occupano tutta la larghezza quando sono attivi da soli */
-    padding: 15px 0; /* Un po' più grandi per enfasi */
-    margin-top: 15px;
-}
-#btn-next:hover {
-    background-color: #333;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border);
 }
 
-/* --- FEEDBACK E RISULTATI --- */
+#btn-next:hover { background: rgba(255, 255, 255, 0.16); }
+
+.full-width-action {
+    width: 100%;
+    margin-top: 0;
+    color: #102007 !important;
+    background: var(--accent) !important;
+    border-color: transparent !important;
+}
+
 .feedback-box {
-    background-color: #e9ecef;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
+    margin: 10px 6px 6px;
+    padding: 16px 18px;
+    color: #dce6e1;
+    font-size: 0.93rem;
+    line-height: 1.55;
     text-align: left;
-    font-size: 1.1em;
-}
-.feedback-box strong {
-    color: #1a73e8; /* Colore per evidenziare i numeri chiave */
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 3px solid var(--accent);
+    border-radius: 12px;
 }
 
-/* --- FOOTER PUNTEGGIO --- */
-.score-display {
-    margin-top: 25px;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: right;
+.feedback-box p { margin: 3px 0; }
+.feedback-box strong { color: var(--accent); }
+
+.feedback-title,
+.result-heading {
+    color: var(--text);
+    font-weight: 850;
 }
+
+.result-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 13px;
+    font-size: 1rem;
+}
+
+.result-icon {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    color: #102007;
+    background: var(--accent);
+    border-radius: 9px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.result-grid div {
+    padding: 10px 8px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 9px;
+}
+
+.result-grid span,
+.result-grid strong {
+    display: block;
+}
+
+.result-grid span {
+    margin-bottom: 3px;
+    color: var(--muted);
+    font-size: 0.66rem;
+}
+
+.result-grid strong {
+    color: var(--text);
+    font-size: 0.91rem;
+}
+
+.feedback-perfect { border-left-color: var(--accent); }
+.feedback-good { border-left-color: #52d5ff; }
+.feedback-miss { border-left-color: #ffb84d; }
+.feedback-error { border-left-color: #ff716d; }
+
+.feedback-final {
+    text-align: center;
+    border-left: 0;
+    background: linear-gradient(145deg, rgba(185, 242, 39, 0.1), rgba(255, 255, 255, 0.04));
+}
+
+.final-score {
+    color: var(--accent);
+    font-size: clamp(2.4rem, 10vw, 4rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.06em;
+}
+
+.final-label {
+    margin-top: 6px !important;
+    color: var(--muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+}
+
+.final-meter {
+    height: 8px;
+    margin: 17px 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+}
+
+.final-meter span {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+    border-radius: inherit;
+}
+
+.round-enter { animation: roundEnter 0.42s ease both; }
+.feedback-enter { animation: feedbackEnter 0.34s ease both; }
+.score-pop { animation: scorePop 0.35s ease; }
+.input-error { animation: inputError 0.32s ease; }
+
+@keyframes roundEnter {
+    from { opacity: 0.55; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes feedbackEnter {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scorePop {
+    50% { color: var(--accent); transform: scale(1.18); }
+}
+
+@keyframes inputError {
+    25%, 75% { transform: translateX(-4px); border-color: #ff716d; }
+    50% { transform: translateX(4px); }
+}
+
+.score-display {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+.score-display p {
+    margin: 0;
+    padding: 10px 14px;
+    color: var(--muted);
+    font-size: 0.84rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 11px;
+}
+
 #punteggio-totale {
-    color: #cc0000; /* Colore rosso per il punteggio totale */
+    color: var(--text);
+    font-size: 1rem;
+}
+
+@media (max-width: 560px) {
+    body { padding: 12px; align-items: start; }
+    .game-container { padding: 16px; border-radius: 22px; }
+    header { align-items: flex-start; padding-bottom: 16px; }
+    .brand-mark { width: 40px; height: 40px; font-size: 20px; border-radius: 12px; }
+    .eyebrow { display: none; }
+    .logo { font-size: 0.98rem; }
+    .round-info { max-width: 42%; overflow: hidden; text-overflow: ellipsis; }
+    .input-area { flex-direction: column; }
+    .action-button { width: 100%; }
+    .score-display { justify-content: stretch; }
+    .score-display p { width: 100%; text-align: center; }
+    .result-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }

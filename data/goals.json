@@ -1,56 +1,1046 @@
 [
   {
     "id": 1,
-    "partita": "Ronaldo Rovesciata (Goal Esotico)",
-    "immagine": "ronaldorovescita.jpg", 
+    "partita": "Cristiano Ronaldo – Juventus vs Real Madrid 2018 (rovesciata)",
+    "immagine": "ronaldorovescita.jpg",
     "minutoEsatto": 64
   },
   {
     "id": 2,
-    "partita": "Ibrahimović Rovesciata (Goal Spettacolare)",
-    "immagine": "ibra rovesciata.jpeg", 
-    "minutoEsatto": 91
+    "partita": "Zlatan Ibrahimović – PSG vs Bastia 2013 (tacco volante)",
+    "immagine": "Zlatan Ibrahimović – PSG vs Bastia 2013 (tacco volante).jpg",
+    "minutoEsatto": 90
   },
   {
     "id": 3,
     "partita": "Diego Maradona – 'Gol del secolo' (Argentina vs Inghilterra, 1986)",
-    "immagine": "goal maradona.jpg", 
+    "immagine": "goal maradona.jpg",
     "minutoEsatto": 55
   },
   {
     "id": 4,
     "partita": "Diego Maradona – 'La mano de Dios' (Argentina vs Inghilterra, 1986)",
-    "immagine": "goal maradona mano.jpg", 
+    "immagine": "goal maradona mano.jpg",
     "minutoEsatto": 51
   },
   {
     "id": 5,
     "partita": "Lionel Messi – Gol contro il Getafe (Copa del Rey, 2007)",
-    "immagine": "messi goal.jpg", 
+    "immagine": "messi goal.jpg",
     "minutoEsatto": 28
   },
   {
     "id": 6,
     "partita": "Roberto Carlos – Punizione contro la Francia (Tournoi de France, 1997)",
-    "immagine": "robertocarlos.jpg", 
+    "immagine": "roberto-carlos-punizione-brasile-francia-3.jpg",
     "minutoEsatto": 21
   },
   {
     "id": 7,
     "partita": "Zinedine Zidane – Volée Finale Champions League (Real Madrid vs Bayer Leverkusen, 2002)",
-    "immagine": "zidane goal.jpg", 
+    "immagine": "zidane goal.jpg",
     "minutoEsatto": 45
   },
   {
     "id": 8,
     "partita": "Ronaldo Nazário – Gol contro il Compostela (Barcellona, 1996)",
-    "immagine": "ronaldonazario.jpg",
+    "immagine": "ronaldonazrio.jpg",
     "minutoEsatto": 36
   },
   {
-    "id": 9, 
+    "id": 9,
     "partita": "Marco Van Basten – Finale Euro ’88 (Olanda vs URSS, 1988)",
-    "immagine": "vanbasten.jpg", 
+    "immagine": "vanbasten.jpg",
     "minutoEsatto": 54
+  },
+  {
+    "id": 10,
+    "partita": "Alessandro Del Piero – Juventus vs Fiorentina 1994",
+    "immagine": "Del_Piero_Juventus-Fiorentina_1994.jpg",
+    "minutoEsatto": 88
+  },
+  {
+    "id": 11,
+    "partita": "Roberto Baggio – Brescia vs Juventus 2001",
+    "immagine": "Roberto Baggio – Brescia vs Juventus 2001.jpg",
+    "minutoEsatto": 84
+  },
+  {
+    "id": 12,
+    "partita": "Francesco Totti – Roma vs Sampdoria 2006 (cucchiaio)",
+    "immagine": "Francesco Totti – Roma vs Sampdoria 2006 (cucchiaio).jpg",
+    "minutoEsatto": 69
+  },
+  {
+    "id": 13,
+    "partita": "Pavel Nedvěd – Lazio vs Inter 1999",
+    "immagine": "Pavel Nedvěd – Lazio vs Inter 1999.jpg",
+    "minutoEsatto": 73
+  },
+  {
+    "id": 14,
+    "partita": "George Weah – Milan vs Verona 1996 (corsa da area ad area)",
+    "immagine": "George Weah – Milan vs Verona 1996.jpg",
+    "minutoEsatto": 85
+  },
+  {
+    "id": 15,
+    "partita": "Antonio Di Natale – Udinese vs Napoli 2011",
+    "immagine": "Antonio Di Natale – Udinese vs Napoli 2011.jpg",
+    "minutoEsatto": 62
+  },
+  {
+    "id": 16,
+    "partita": "Andrea Pirlo – Milan vs Parma 2001 (punizione)",
+    "immagine": "Andrea Pirlo – Milan vs Parma 2001 (punizione).jpg",
+    "minutoEsatto": 35
+  },
+  {
+    "id": 17,
+    "partita": "Hernán Crespo – Lazio vs Parma 2000",
+    "immagine": "Hernán Crespo – Lazio vs Parma 2000.jpg",
+    "minutoEsatto": 58
+  },
+  {
+    "id": 18,
+    "partita": "Kaka – Milan vs Manchester United 2007 (Champions, ma simbolo Milan)",
+    "immagine": "Kaka – Milan vs Manchester United 2007.jpg",
+    "minutoEsatto": 37
+  },
+  {
+    "id": 19,
+    "partita": "Diego Milito – Inter vs Bayern Monaco 2010 (finale Champions)",
+    "immagine": "Diego Milito – Inter vs Bayern Monaco 2010 (finale Champions).jpg",
+    "minutoEsatto": 70
+  },
+  {
+    "id": 20,
+    "partita": "Wayne Rooney – Manchester United vs Manchester City 2011 (rovesciata)",
+    "immagine": "Wayne Rooney – Manchester United vs Manchester City 2011 (rovesciata).jpg",
+    "minutoEsatto": 78
+  },
+  {
+    "id": 21,
+    "partita": "Thierry Henry – Arsenal vs Manchester United 2000 (controllo e volée)",
+    "immagine": "Thierry Henry – Arsenal vs Manchester United 2000.jpg",
+    "minutoEsatto": 48
+  },
+  {
+    "id": 22,
+    "partita": "Dennis Bergkamp – Arsenal vs Newcastle 2002",
+    "immagine": "Dennis Bergkamp – Arsenal vs Newcastle 2002.jpg",
+    "minutoEsatto": 11
+  },
+  {
+    "id": 23,
+    "partita": "Steven Gerrard – Liverpool vs West Ham (FA Cup 2006)",
+    "immagine": "Steven Gerrard – Liverpool vs West Ham (FA Cup 2006).jpg",
+    "minutoEsatto": 91
+  },
+  {
+    "id": 24,
+    "partita": "Cristiano Ronaldo – Manchester United vs Portsmouth 2008 (punizione)",
+    "immagine": "Cristiano Ronaldo – Manchester United vs Portsmouth 2008 (punizione).jpg",
+    "minutoEsatto": 30
+  },
+  {
+    "id": 25,
+    "partita": "Jamie Vardy – Leicester vs Liverpool 2016 (tiro al volo)",
+    "immagine": "Jamie Vardy – Leicester vs Liverpool 2016 (tiro al volo).jpg",
+    "minutoEsatto": 61
+  },
+  {
+    "id": 26,
+    "partita": "Sergio Agüero – Manchester City vs QPR 2012",
+    "immagine": "Sergio Agüero – Manchester City vs QPR 2012.jpg",
+    "minutoEsatto": 94
+  },
+  {
+    "id": 27,
+    "partita": "Gareth Bale – Tottenham vs West Ham 2013",
+    "immagine": "Gareth Bale – Tottenham vs West Ham 2013.jpg",
+    "minutoEsatto": 89
+  },
+  {
+    "id": 28,
+    "partita": "Mo Salah – Liverpool vs Chelsea 2019",
+    "immagine": "Mo Salah – Liverpool vs Chelsea 2019.jpg",
+    "minutoEsatto": 53
+  },
+  {
+    "id": 29,
+    "partita": "Eric Cantona – Manchester United vs Sunderland 1996",
+    "immagine": "Eric Cantona – Manchester United vs Sunderland 1996.jpg",
+    "minutoEsatto": 82
+  },
+  {
+    "id": 30,
+    "partita": "Robin van Persie – Manchester United vs Aston Villa 2013 (volée)",
+    "immagine": "Robin van Persie – Manchester United vs Aston Villa 2013 (volée).jpg",
+    "minutoEsatto": 33
+  },
+  {
+    "id": 31,
+    "partita": "Neymar – Barcellona vs Villarreal 2015 (sombrero e girata)",
+    "immagine": "Neymar – Barcellona vs Villarreal 2015.jpg",
+    "minutoEsatto": 78
+  },
+  {
+    "id": 32,
+    "partita": "Luis Suárez – Barcellona vs PSG 2015 (dribbling doppio tunnel)",
+    "immagine": "Luis Suárez – Barcellona vs PSG 2015 (dribbling doppio tunnel).jpg",
+    "minutoEsatto": 80
+  },
+  {
+    "id": 33,
+    "partita": "Xavi Hernández – Barcellona vs Real Madrid 2009",
+    "immagine": "Xavi Hernández – Barcellona vs Real Madrid 2009.jpg",
+    "minutoEsatto": 65
+  },
+  {
+    "id": 34,
+    "partita": "Andres Iniesta – Barcellona vs Chelsea 2009 (Champions, sem.)",
+    "immagine": "Andres Iniesta – Barcellona vs Chelsea 2009 (Champions, sem.).jpg",
+    "minutoEsatto": 93
+  },
+  {
+    "id": 35,
+    "partita": "Ronaldinho – Real Madrid vs Barcellona 2005",
+    "immagine": "Ronaldinho – Real Madrid vs Barcellona 2005.jpg",
+    "minutoEsatto": 77
+  },
+  {
+    "id": 36,
+    "partita": "Eden Hazard – Lille vs Marseille 2011",
+    "immagine": "Eden Hazard – Lille vs Marseille 2011.jpeg",
+    "minutoEsatto": 68
+  },
+  {
+    "id": 37,
+    "partita": "Ronaldinho – PSG vs Guingamp 2003",
+    "immagine": "Ronaldinho – PSG vs Guingamp 2003.jpg",
+    "minutoEsatto": 66
+  },
+  {
+    "id": 38,
+    "partita": "Angel Di María – PSG vs Nizza 2019",
+    "immagine": "Angel Di María – PSG vs Nizza 2019.jpeg",
+    "minutoEsatto": 81
+  },
+  {
+    "id": 39,
+    "partita": "Neymar – PSG vs Strasbourg 2020",
+    "immagine": "Neymar – PSG vs Strasbourg 2020.jpg",
+    "minutoEsatto": 88
+  },
+  {
+    "id": 40,
+    "partita": "Pauleta – PSG vs Marsiglia 2004",
+    "immagine": "Pauleta – PSG vs Marsiglia 2004.jpg",
+    "minutoEsatto": 41
+  },
+  {
+    "id": 41,
+    "partita": "Kevin De Bruyne – Wolfsburg vs Bayern 2015",
+    "immagine": "Kevin De Bruyne – Wolfsburg vs Bayern 2015.jpg",
+    "minutoEsatto": 73
+  },
+  {
+    "id": 42,
+    "partita": "Thomas Müller – Bayern Monaco vs Barcellona 2015",
+    "immagine": "Thomas Müller – Bayern Monaco vs Barcellona 2015.jpg",
+    "minutoEsatto": 76
+  },
+  {
+    "id": 43,
+    "partita": "Erling Haaland – Borussia Dortmund vs PSG 2020",
+    "immagine": "Erling Haaland – Borussia Dortmund vs PSG 2020.jpg",
+    "minutoEsatto": 77
+  },
+  {
+    "id": 44,
+    "partita": "Mario Götze – Germania vs Argentina 2014 (Mondiale, finale)",
+    "immagine": "Mario Götze – Germania vs Argentina 2014 (Mondiale, finale).jpg",
+    "minutoEsatto": 113
+  },
+  {
+    "id": 45,
+    "partita": "Raúl – Real Madrid vs Vasco da Gama 1998 (Intercontinentale)",
+    "immagine": "Raúl – Real Madrid vs Vasco da Gama 1998 (Intercontinentale).jpg",
+    "minutoEsatto": 83
+  },
+  {
+    "id": 46,
+    "partita": "Robin van Persie – Olanda vs Spagna 2014 (tuffo di testa)",
+    "immagine": "Robin van Persie – Olanda vs Spagna 2014.jpg",
+    "minutoEsatto": 44
+  },
+  {
+    "id": 47,
+    "partita": "James Rodríguez – Colombia vs Uruguay 2014",
+    "immagine": "James Rodríguez – Colombia vs Uruguay 2014.jpg",
+    "minutoEsatto": 28
+  },
+  {
+    "id": 48,
+    "partita": "Miroslav Klose – Germania vs Brasile 2014",
+    "immagine": "Miroslav Klose – Germania vs Brasile 2014.jpg",
+    "minutoEsatto": 23
+  },
+  {
+    "id": 49,
+    "partita": "Benjamin Pavard – Francia vs Argentina 2018",
+    "immagine": "Benjamin Pavard – Francia vs Argentina 2018.jpg",
+    "minutoEsatto": 57
+  },
+  {
+    "id": 50,
+    "partita": "Emmanuel Petit – Francia vs Brasile 1998 (finale)",
+    "immagine": "Emmanuel Petit – Francia vs Brasile 1998 (finale).jpg",
+    "minutoEsatto": 93
+  },
+  {
+    "id": 51,
+    "partita": "Andrés Iniesta – Spagna vs Olanda 2010 (finale)",
+    "immagine": "Andrés Iniesta – Spagna vs Olanda 2010.jpg",
+    "minutoEsatto": 116
+  },
+  {
+    "id": 52,
+    "partita": "Didier Drogba – Chelsea vs Bayern 2012 (finale)",
+    "immagine": "Didier Drogba – Chelsea vs Bayern 2012 (finale).jpg",
+    "minutoEsatto": 88
+  },
+  {
+    "id": 53,
+    "partita": "Karim Benzema – Real Madrid vs Chelsea 2022",
+    "immagine": "Karim Benzema – Real Madrid vs Chelsea 2022.jpg",
+    "minutoEsatto": 96
+  },
+  {
+    "id": 54,
+    "partita": "Lionel Messi – Barcellona vs Real Madrid 2011 (semifinale)",
+    "immagine": "Lionel Messi – Barcellona vs Real Madrid 2011.jpg",
+    "minutoEsatto": 87
+  },
+  {
+    "id": 55,
+    "partita": "Fernando Torres – Chelsea vs Barcellona 2012",
+    "immagine": "Fernando Torres – Chelsea vs Barcellona 2012.jpg",
+    "minutoEsatto": 90
+  },
+  {
+    "id": 56,
+    "partita": "Andriy Shevchenko – Milan vs Inter 2003",
+    "immagine": "Andriy Shevchenko – Milan vs Inter 2003.jpg",
+    "minutoEsatto": 42
+  },
+  {
+    "id": 57,
+    "partita": "Steven Gerrard – Liverpool vs Olympiakos 2004",
+    "immagine": "Steven Gerrard – Liverpool vs Olympiakos 2004.jpg",
+    "minutoEsatto": 86
+  },
+  {
+    "id": 58,
+    "partita": "Marco Materazzi – Italia vs Francia 2006 (Mondiali, 2006)",
+    "immagine": "Marco Materazzi – Italia vs Francia (Mondiali, 2006).jpg",
+    "minutoEsatto": 19
+  },
+  {
+    "id": 59,
+    "partita": "Francesco Totti – Roma vs Sampdoria 2006 (Serie A)",
+    "immagine": "Francesco Totti – Roma vs Sampdoria (Serie A, 2006).jpg",
+    "minutoEsatto": 69
+  },
+  {
+    "id": 60,
+    "partita": "Sergio Ramos – Real Madrid vs Atlético Madrid 2014 (Champions League, 2014)",
+    "immagine": "Sergio Ramos – Real Madrid vs Atlético Madrid (Champions League, 2014).jpg",
+    "minutoEsatto": 93
+  },
+  {
+    "id": 61,
+    "partita": "Kostas Manolas – Roma vs Barcellona 2018 (Champions League, 2018)",
+    "immagine": "Kostas Manolas – Roma vs Barcellona (Champions League, 2018).jpg",
+    "minutoEsatto": 82
+  },
+  {
+    "id": 62,
+    "partita": "Del Piero – Italia vs Germania 2006",
+    "immagine": "Del Piero – Italia vs Germania 2006.jpg",
+    "minutoEsatto": 121
+  },
+  {
+    "id": 63,
+    "partita": "Neymar – Brasile vs Croazia 2014",
+    "immagine": "Neymar – Brasile vs Croazia 2014.jpg",
+    "minutoEsatto": 29
+  },
+  {
+    "id": 64,
+    "partita": "Balotelli – Italia vs Germania 2012",
+    "immagine": "Balotelli – Italia vs Germania 2012.jpg",
+    "minutoEsatto": 36
+  },
+  {
+    "id": 65,
+    "partita": "Frank Lampard – Chelsea vs Bolton 2005",
+    "immagine": "Frank Lampard – Chelsea vs Bolton 2005.jpg",
+    "minutoEsatto": 79
+  },
+  {
+    "id": 66,
+    "partita": "Nicolò Barella – Inter vs Juventus 2021",
+    "immagine": "Nicolò Barella – Inter vs Juventus 2021.jpg",
+    "minutoEsatto": 51
+  },
+  {
+    "id": 67,
+    "partita": "Fabio Quagliarella – Sampdoria vs Napoli 2018",
+    "immagine": "Fabio Quagliarella – Sampdoria vs Napoli 2018.jpg",
+    "minutoEsatto": 75
+  },
+  {
+    "id": 68,
+    "partita": "Hakim Ziyech – Ajax vs Tottenham 2019",
+    "immagine": "Hakim Ziyech – Ajax vs Tottenham 2019.jpg",
+    "minutoEsatto": 35
+  },
+  {
+    "id": 69,
+    "partita": "Dusan Tadić – Ajax vs Real Madrid 2019",
+    "immagine": "Dusan Tadić – Ajax vs Real Madrid 2019.jpg",
+    "minutoEsatto": 62
+  },
+  {
+    "id": 70,
+    "partita": "Gareth Bale – Real Madrid vs Liverpool 2018 (rovesciata)",
+    "immagine": "Gareth Bale – Real Madrid vs Liverpool 2018 (rovesciata).jpg",
+    "minutoEsatto": 64
+  },
+  {
+    "id": 71,
+    "partita": "Diego Milito – Inter vs Siena 2010 (scudetto)",
+    "immagine": "Diego Milito – Inter vs Siena 2010 (scudetto).jpg",
+    "minutoEsatto": 57
+  },
+  {
+    "id": 72,
+    "partita": "Paulo Dybala – Juventus vs Lazio 2017",
+    "immagine": "Paulo Dybala – Juventus vs Lazio 2017.jpg",
+    "minutoEsatto": 85
+  },
+  {
+    "id": 73,
+    "partita": "Dries Mertens – Napoli vs Torino 2017 (cucchiaio)",
+    "immagine": "Dries Mertens – Napoli vs Torino 2017 (cucchiaio).jpg",
+    "minutoEsatto": 78
+  },
+  {
+    "id": 74,
+    "partita": "Antonio Cassano – Bari vs Inter 1999",
+    "immagine": "Antonio Cassano – Bari vs Inter 1999.jpg",
+    "minutoEsatto": 79
+  },
+  {
+    "id": 75,
+    "partita": "Geoff Hurst - Inghilterra vs Germania Ovest 1966 (gol fantasma finale Mondiale)",
+    "immagine": "generated/goal-075.svg",
+    "minutoEsatto": 101
+  },
+  {
+    "id": 76,
+    "partita": "Geoff Hurst - Inghilterra vs Germania Ovest 1966 (tripletta finale Mondiale)",
+    "immagine": "generated/goal-076.svg",
+    "minutoEsatto": 120
+  },
+  {
+    "id": 77,
+    "partita": "Carlos Alberto - Brasile vs Italia 1970 (finale Mondiale)",
+    "immagine": "generated/goal-077.svg",
+    "minutoEsatto": 86
+  },
+  {
+    "id": 78,
+    "partita": "Pele - Brasile vs Svezia 1958 (finale Mondiale)",
+    "immagine": "generated/goal-078.svg",
+    "minutoEsatto": 55
+  },
+  {
+    "id": 79,
+    "partita": "Pele - Brasile vs Svezia 1958 (doppietta finale Mondiale)",
+    "immagine": "generated/goal-079.svg",
+    "minutoEsatto": 90
+  },
+  {
+    "id": 80,
+    "partita": "Jairzinho - Brasile vs Italia 1970 (finale Mondiale)",
+    "immagine": "generated/goal-080.svg",
+    "minutoEsatto": 71
+  },
+  {
+    "id": 81,
+    "partita": "Gerd Muller - Germania Ovest vs Olanda 1974 (finale Mondiale)",
+    "immagine": "generated/goal-081.svg",
+    "minutoEsatto": 43
+  },
+  {
+    "id": 82,
+    "partita": "Johan Cruyff - Olanda vs Brasile 1974",
+    "immagine": "generated/goal-082.svg",
+    "minutoEsatto": 65
+  },
+  {
+    "id": 83,
+    "partita": "Archie Gemmill - Scozia vs Olanda 1978",
+    "immagine": "generated/goal-083.svg",
+    "minutoEsatto": 68
+  },
+  {
+    "id": 84,
+    "partita": "Mario Kempes - Argentina vs Olanda 1978 (finale Mondiale)",
+    "immagine": "generated/goal-084.svg",
+    "minutoEsatto": 38
+  },
+  {
+    "id": 85,
+    "partita": "Marco Tardelli - Italia vs Germania Ovest 1982 (urlo Mundial)",
+    "immagine": "generated/goal-085.svg",
+    "minutoEsatto": 69
+  },
+  {
+    "id": 86,
+    "partita": "Paolo Rossi - Italia vs Brasile 1982 (primo gol)",
+    "immagine": "generated/goal-086.svg",
+    "minutoEsatto": 5
+  },
+  {
+    "id": 87,
+    "partita": "Paolo Rossi - Italia vs Brasile 1982 (tripletta decisiva)",
+    "immagine": "generated/goal-087.svg",
+    "minutoEsatto": 74
+  },
+  {
+    "id": 88,
+    "partita": "Michel Platini - Francia vs Portogallo 1984 (semifinale Euro)",
+    "immagine": "generated/goal-088.svg",
+    "minutoEsatto": 119
+  },
+  {
+    "id": 89,
+    "partita": "Igor Belanov - URSS vs Belgio 1986",
+    "immagine": "generated/goal-089.svg",
+    "minutoEsatto": 27
+  },
+  {
+    "id": 90,
+    "partita": "Josimar - Brasile vs Irlanda del Nord 1986",
+    "immagine": "generated/goal-090.svg",
+    "minutoEsatto": 42
+  },
+  {
+    "id": 91,
+    "partita": "Gary Lineker - Inghilterra vs Polonia 1986",
+    "immagine": "generated/goal-091.svg",
+    "minutoEsatto": 9
+  },
+  {
+    "id": 92,
+    "partita": "Andreas Brehme - Germania Ovest vs Argentina 1990 (finale Mondiale)",
+    "immagine": "generated/goal-092.svg",
+    "minutoEsatto": 85
+  },
+  {
+    "id": 93,
+    "partita": "Roger Milla - Camerun vs Colombia 1990",
+    "immagine": "generated/goal-093.svg",
+    "minutoEsatto": 106
+  },
+  {
+    "id": 94,
+    "partita": "David Platt - Inghilterra vs Belgio 1990",
+    "immagine": "generated/goal-094.svg",
+    "minutoEsatto": 119
+  },
+  {
+    "id": 95,
+    "partita": "Dennis Bergkamp - Olanda vs Argentina 1998 (Mondiale)",
+    "immagine": "generated/goal-095.svg",
+    "minutoEsatto": 90
+  },
+  {
+    "id": 96,
+    "partita": "Michael Owen - Inghilterra vs Argentina 1998",
+    "immagine": "generated/goal-096.svg",
+    "minutoEsatto": 16
+  },
+  {
+    "id": 97,
+    "partita": "Davor Suker - Croazia vs Germania 1998",
+    "immagine": "generated/goal-097.svg",
+    "minutoEsatto": 80
+  },
+  {
+    "id": 98,
+    "partita": "Zinedine Zidane - Francia vs Brasile 1998 (primo colpo di testa)",
+    "immagine": "generated/goal-098.svg",
+    "minutoEsatto": 27
+  },
+  {
+    "id": 99,
+    "partita": "Zinedine Zidane - Francia vs Brasile 1998 (secondo colpo di testa)",
+    "immagine": "generated/goal-099.svg",
+    "minutoEsatto": 45
+  },
+  {
+    "id": 100,
+    "partita": "David Beckham - Inghilterra vs Grecia 2001 (punizione qualificazione)",
+    "immagine": "generated/goal-100.svg",
+    "minutoEsatto": 93
+  },
+  {
+    "id": 101,
+    "partita": "Rivaldo - Brasile vs Belgio 2002",
+    "immagine": "generated/goal-101.svg",
+    "minutoEsatto": 87
+  },
+  {
+    "id": 102,
+    "partita": "Ronaldinho - Brasile vs Inghilterra 2002 (punizione da lontano)",
+    "immagine": "generated/goal-102.svg",
+    "minutoEsatto": 50
+  },
+  {
+    "id": 103,
+    "partita": "Ronaldo Nazario - Brasile vs Germania 2002 (finale Mondiale)",
+    "immagine": "generated/goal-103.svg",
+    "minutoEsatto": 67
+  },
+  {
+    "id": 104,
+    "partita": "Ronaldo Nazario - Brasile vs Germania 2002 (secondo gol finale)",
+    "immagine": "generated/goal-104.svg",
+    "minutoEsatto": 79
+  },
+  {
+    "id": 105,
+    "partita": "Hakan Sukur - Turchia vs Corea del Sud 2002 (gol piu veloce Mondiale)",
+    "immagine": "generated/goal-105.svg",
+    "minutoEsatto": 1
+  },
+  {
+    "id": 106,
+    "partita": "Maniche - Portogallo vs Olanda 2004 (Euro)",
+    "immagine": "generated/goal-106.svg",
+    "minutoEsatto": 23
+  },
+  {
+    "id": 107,
+    "partita": "Angel Charisteas - Grecia vs Portogallo 2004 (finale Euro)",
+    "immagine": "generated/goal-107.svg",
+    "minutoEsatto": 57
+  },
+  {
+    "id": 108,
+    "partita": "Fabio Grosso - Italia vs Germania 2006 (semifinale Mondiale)",
+    "immagine": "generated/goal-108.svg",
+    "minutoEsatto": 119
+  },
+  {
+    "id": 109,
+    "partita": "David Villa - Spagna vs Russia 2008",
+    "immagine": "generated/goal-109.svg",
+    "minutoEsatto": 44
+  },
+  {
+    "id": 110,
+    "partita": "Fernando Torres - Spagna vs Germania 2008 (finale Euro)",
+    "immagine": "generated/goal-110.svg",
+    "minutoEsatto": 33
+  },
+  {
+    "id": 111,
+    "partita": "Wesley Sneijder - Olanda vs Brasile 2010",
+    "immagine": "generated/goal-111.svg",
+    "minutoEsatto": 68
+  },
+  {
+    "id": 112,
+    "partita": "Giovanni van Bronckhorst - Olanda vs Uruguay 2010",
+    "immagine": "generated/goal-112.svg",
+    "minutoEsatto": 18
+  },
+  {
+    "id": 113,
+    "partita": "Carles Puyol - Spagna vs Germania 2010",
+    "immagine": "generated/goal-113.svg",
+    "minutoEsatto": 73
+  },
+  {
+    "id": 114,
+    "partita": "Andres Iniesta - Spagna vs Olanda 2010 (finale Mondiale)",
+    "immagine": "generated/goal-114.svg",
+    "minutoEsatto": 116
+  },
+  {
+    "id": 115,
+    "partita": "Mario Balotelli - Italia vs Germania 2012 (primo gol)",
+    "immagine": "generated/goal-115.svg",
+    "minutoEsatto": 20
+  },
+  {
+    "id": 116,
+    "partita": "Mario Balotelli - Italia vs Germania 2012 (secondo gol)",
+    "immagine": "generated/goal-116.svg",
+    "minutoEsatto": 36
+  },
+  {
+    "id": 117,
+    "partita": "Zlatan Ibrahimovic - Svezia vs Inghilterra 2012 (rovesciata)",
+    "immagine": "generated/goal-117.svg",
+    "minutoEsatto": 90
+  },
+  {
+    "id": 118,
+    "partita": "Mario Mandzukic - Croazia vs Italia 2012",
+    "immagine": "generated/goal-118.svg",
+    "minutoEsatto": 72
+  },
+  {
+    "id": 119,
+    "partita": "Mario Gotze - Germania vs Argentina 2014 (finale Mondiale)",
+    "immagine": "generated/goal-119.svg",
+    "minutoEsatto": 113
+  },
+  {
+    "id": 120,
+    "partita": "Tim Cahill - Australia vs Olanda 2014",
+    "immagine": "generated/goal-120.svg",
+    "minutoEsatto": 21
+  },
+  {
+    "id": 121,
+    "partita": "Jermaine Jones - Stati Uniti vs Portogallo 2014",
+    "immagine": "generated/goal-121.svg",
+    "minutoEsatto": 64
+  },
+  {
+    "id": 122,
+    "partita": "Andre Schurrle - Germania vs Brasile 2014",
+    "immagine": "generated/goal-122.svg",
+    "minutoEsatto": 69
+  },
+  {
+    "id": 123,
+    "partita": "Toni Kroos - Germania vs Svezia 2018 (punizione)",
+    "immagine": "generated/goal-123.svg",
+    "minutoEsatto": 95
+  },
+  {
+    "id": 124,
+    "partita": "Cristiano Ronaldo - Portogallo vs Spagna 2018 (punizione)",
+    "immagine": "generated/goal-124.svg",
+    "minutoEsatto": 88
+  },
+  {
+    "id": 125,
+    "partita": "Nacho - Spagna vs Portogallo 2018",
+    "immagine": "generated/goal-125.svg",
+    "minutoEsatto": 58
+  },
+  {
+    "id": 126,
+    "partita": "Luka Modric - Croazia vs Argentina 2018",
+    "immagine": "generated/goal-126.svg",
+    "minutoEsatto": 80
+  },
+  {
+    "id": 127,
+    "partita": "Kylian Mbappe - Francia vs Argentina 2018",
+    "immagine": "generated/goal-127.svg",
+    "minutoEsatto": 64
+  },
+  {
+    "id": 128,
+    "partita": "Benjamin Pavard - Francia vs Argentina 2018",
+    "immagine": "generated/goal-128.svg",
+    "minutoEsatto": 57
+  },
+  {
+    "id": 129,
+    "partita": "Mario Mandzukic - Croazia vs Inghilterra 2018",
+    "immagine": "generated/goal-129.svg",
+    "minutoEsatto": 109
+  },
+  {
+    "id": 130,
+    "partita": "Kylian Mbappe - Francia vs Croazia 2018 (finale Mondiale)",
+    "immagine": "generated/goal-130.svg",
+    "minutoEsatto": 65
+  },
+  {
+    "id": 131,
+    "partita": "Paul Pogba - Francia vs Croazia 2018 (finale Mondiale)",
+    "immagine": "generated/goal-131.svg",
+    "minutoEsatto": 59
+  },
+  {
+    "id": 132,
+    "partita": "Angel Di Maria - Argentina vs Francia 2022 (finale Mondiale)",
+    "immagine": "generated/goal-132.svg",
+    "minutoEsatto": 36
+  },
+  {
+    "id": 133,
+    "partita": "Lionel Messi - Argentina vs Francia 2022 (rigore finale Mondiale)",
+    "immagine": "generated/goal-133.svg",
+    "minutoEsatto": 23
+  },
+  {
+    "id": 134,
+    "partita": "Kylian Mbappe - Francia vs Argentina 2022 (volley finale Mondiale)",
+    "immagine": "generated/goal-134.svg",
+    "minutoEsatto": 81
+  },
+  {
+    "id": 135,
+    "partita": "Lionel Messi - Argentina vs Francia 2022 (supplementari finale)",
+    "immagine": "generated/goal-135.svg",
+    "minutoEsatto": 108
+  },
+  {
+    "id": 136,
+    "partita": "Kylian Mbappe - Francia vs Argentina 2022 (rigore supplementari)",
+    "immagine": "generated/goal-136.svg",
+    "minutoEsatto": 118
+  },
+  {
+    "id": 137,
+    "partita": "Richarlison - Brasile vs Serbia 2022 (rovesciata)",
+    "immagine": "generated/goal-137.svg",
+    "minutoEsatto": 73
+  },
+  {
+    "id": 138,
+    "partita": "Salem Al-Dawsari - Arabia Saudita vs Argentina 2022",
+    "immagine": "generated/goal-138.svg",
+    "minutoEsatto": 53
+  },
+  {
+    "id": 139,
+    "partita": "Wout Weghorst - Olanda vs Argentina 2022 (schema su punizione)",
+    "immagine": "generated/goal-139.svg",
+    "minutoEsatto": 101
+  },
+  {
+    "id": 140,
+    "partita": "Neymar - Brasile vs Croazia 2022 (supplementari)",
+    "immagine": "generated/goal-140.svg",
+    "minutoEsatto": 105
+  },
+  {
+    "id": 141,
+    "partita": "Goncalo Ramos - Portogallo vs Svizzera 2022",
+    "immagine": "generated/goal-141.svg",
+    "minutoEsatto": 17
+  },
+  {
+    "id": 142,
+    "partita": "Lionel Messi - Argentina vs Messico 2022",
+    "immagine": "generated/goal-142.svg",
+    "minutoEsatto": 64
+  },
+  {
+    "id": 143,
+    "partita": "Jude Bellingham - Inghilterra vs Slovacchia 2024 (rovesciata)",
+    "immagine": "generated/goal-143.svg",
+    "minutoEsatto": 95
+  },
+  {
+    "id": 144,
+    "partita": "Lamine Yamal - Spagna vs Francia 2024 (Euro)",
+    "immagine": "generated/goal-144.svg",
+    "minutoEsatto": 21
+  },
+  {
+    "id": 145,
+    "partita": "Mikel Oyarzabal - Spagna vs Inghilterra 2024 (finale Euro)",
+    "immagine": "generated/goal-145.svg",
+    "minutoEsatto": 86
+  },
+  {
+    "id": 146,
+    "partita": "Cole Palmer - Inghilterra vs Spagna 2024 (finale Euro)",
+    "immagine": "generated/goal-146.svg",
+    "minutoEsatto": 73
+  },
+  {
+    "id": 147,
+    "partita": "Cristiano Ronaldo - Real Madrid vs Atletico Madrid 2017 (semifinale Champions)",
+    "immagine": "generated/goal-147.svg",
+    "minutoEsatto": 10
+  },
+  {
+    "id": 148,
+    "partita": "Lionel Messi - Barcellona vs Bayern Monaco 2015",
+    "immagine": "generated/goal-148.svg",
+    "minutoEsatto": 77
+  },
+  {
+    "id": 149,
+    "partita": "Lionel Messi - Barcellona vs Bayern Monaco 2015 (cucchiaio su Neuer)",
+    "immagine": "generated/goal-149.svg",
+    "minutoEsatto": 80
+  },
+  {
+    "id": 150,
+    "partita": "Neymar - Barcellona vs PSG 2017 (punizione rimonta)",
+    "immagine": "generated/goal-150.svg",
+    "minutoEsatto": 88
+  },
+  {
+    "id": 151,
+    "partita": "Sergi Roberto - Barcellona vs PSG 2017 (remuntada)",
+    "immagine": "generated/goal-151.svg",
+    "minutoEsatto": 95
+  },
+  {
+    "id": 152,
+    "partita": "Lucas Moura - Tottenham vs Ajax 2019 (gol qualificazione)",
+    "immagine": "generated/goal-152.svg",
+    "minutoEsatto": 96
+  },
+  {
+    "id": 153,
+    "partita": "Divock Origi - Liverpool vs Barcellona 2019 (corner taken quickly)",
+    "immagine": "generated/goal-153.svg",
+    "minutoEsatto": 79
+  },
+  {
+    "id": 154,
+    "partita": "Georginio Wijnaldum - Liverpool vs Barcellona 2019",
+    "immagine": "generated/goal-154.svg",
+    "minutoEsatto": 54
+  },
+  {
+    "id": 155,
+    "partita": "Zinedine Zidane - Real Madrid vs Bayer Leverkusen 2002",
+    "immagine": "generated/goal-155.svg",
+    "minutoEsatto": 45
+  },
+  {
+    "id": 156,
+    "partita": "Ole Gunnar Solskjaer - Manchester United vs Bayern Monaco 1999",
+    "immagine": "generated/goal-156.svg",
+    "minutoEsatto": 93
+  },
+  {
+    "id": 157,
+    "partita": "Teddy Sheringham - Manchester United vs Bayern Monaco 1999",
+    "immagine": "generated/goal-157.svg",
+    "minutoEsatto": 91
+  },
+  {
+    "id": 158,
+    "partita": "Didier Drogba - Chelsea vs Bayern Monaco 2012",
+    "immagine": "generated/goal-158.svg",
+    "minutoEsatto": 88
+  },
+  {
+    "id": 159,
+    "partita": "Gareth Bale - Real Madrid vs Liverpool 2018 (rovesciata)",
+    "immagine": "generated/goal-159.svg",
+    "minutoEsatto": 64
+  },
+  {
+    "id": 160,
+    "partita": "Sadio Mane - Liverpool vs Bayern Monaco 2019",
+    "immagine": "generated/goal-160.svg",
+    "minutoEsatto": 26
+  },
+  {
+    "id": 161,
+    "partita": "Rodrygo - Real Madrid vs Manchester City 2022 (primo gol rimonta)",
+    "immagine": "generated/goal-161.svg",
+    "minutoEsatto": 90
+  },
+  {
+    "id": 162,
+    "partita": "Rodrygo - Real Madrid vs Manchester City 2022 (secondo gol rimonta)",
+    "immagine": "generated/goal-162.svg",
+    "minutoEsatto": 91
+  },
+  {
+    "id": 163,
+    "partita": "Karim Benzema - Real Madrid vs Manchester City 2022 (rigore supplementari)",
+    "immagine": "generated/goal-163.svg",
+    "minutoEsatto": 95
+  },
+  {
+    "id": 164,
+    "partita": "Vinicius Junior - Real Madrid vs Liverpool 2022 (finale Champions)",
+    "immagine": "generated/goal-164.svg",
+    "minutoEsatto": 59
+  },
+  {
+    "id": 165,
+    "partita": "Kevin De Bruyne - Manchester City vs Real Madrid 2020",
+    "immagine": "generated/goal-165.svg",
+    "minutoEsatto": 83
+  },
+  {
+    "id": 166,
+    "partita": "Sergio Ramos - Real Madrid vs Atletico Madrid 2014",
+    "immagine": "generated/goal-166.svg",
+    "minutoEsatto": 93
+  },
+  {
+    "id": 167,
+    "partita": "Alisson Becker - Liverpool vs West Bromwich 2021",
+    "immagine": "generated/goal-167.svg",
+    "minutoEsatto": 95
+  },
+  {
+    "id": 168,
+    "partita": "Wayne Rooney - Everton vs West Ham 2017 (da centrocampo)",
+    "immagine": "generated/goal-168.svg",
+    "minutoEsatto": 66
+  },
+  {
+    "id": 169,
+    "partita": "Mohamed Salah - Liverpool vs Manchester City 2021",
+    "immagine": "generated/goal-169.svg",
+    "minutoEsatto": 76
+  },
+  {
+    "id": 170,
+    "partita": "Son Heung-min - Tottenham vs Burnley 2019",
+    "immagine": "generated/goal-170.svg",
+    "minutoEsatto": 32
+  },
+  {
+    "id": 171,
+    "partita": "Eden Hazard - Chelsea vs Arsenal 2017",
+    "immagine": "generated/goal-171.svg",
+    "minutoEsatto": 53
+  },
+  {
+    "id": 172,
+    "partita": "Paolo Di Canio - West Ham vs Wimbledon 2000",
+    "immagine": "generated/goal-172.svg",
+    "minutoEsatto": 9
+  },
+  {
+    "id": 173,
+    "partita": "Eric Cantona - Manchester United vs Sunderland 1996",
+    "immagine": "generated/goal-173.svg",
+    "minutoEsatto": 82
+  },
+  {
+    "id": 174,
+    "partita": "Thierry Henry - Arsenal vs Tottenham 2002",
+    "immagine": "generated/goal-174.svg",
+    "minutoEsatto": 13
   }
 ]

@@ -3,49 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚽ GOAL TIME GUESS - Indovina il Minuto</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Goal Time Guess — Indovina il minuto</title>
+    <link rel="stylesheet" href="style.css?v=2"> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1NPPVKYBDE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1NPPVKYBDE');
+</script>
+    <script>
+// Definisci dataLayer e la funzione gtag.
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+// 1. IMPOSTA IL CONSENSO PREDEFINITO AL DENIED (NEGATO) IN MODO GLOBALE.
+// Questo è il requisito di base del GDPR in assenza di un banner.
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'denied',
+  'wait_for_update': 500 // Attende il tempo per un eventuale futuro banner
+});
+
+// 2. Inizializza il tuo Tag GA4
+gtag('js', new Date());
+gtag('config', 'G-1NPPVKYBDE'); 
+</script>
 </head>
 <body>
 
     <div class="game-container">
         <header>
-            <h1 class="logo">GOAL TIME GUESS</h1>
+            <div class="brand">
+                <div class="brand-mark" aria-hidden="true">⚽</div>
+                <div>
+                    <p class="eyebrow">Football challenge</p>
+                    <h1 class="logo">GOAL TIME GUESS</h1>
+                </div>
+            </div>
             <p id="round-counter" class="round-info">Caricamento...</p> 
         </header>
+
+        <div class="progress-track" role="progressbar" aria-label="Avanzamento partita" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
         
         <main class="round-display">
             
             <h2 id="descrizione-partita">In attesa di iniziare...</h2>
             
             <div class="image-box">
-                <img id="immagine-goal" src="" alt="Foto di un momento del Goal">
+                <img id="immagine-goal" src="tempo.jpg" alt="Foto di un momento del Goal">
+                <span class="image-badge">INDOVINA IL MINUTO</span>
             </div>
 
             <div class="input-area">
                 
-                <input type="number" id="stima-input" placeholder="Minuto (1-120)" min="1" max="120" disabled>
+               <input type="number" id="stima-input" placeholder="Minuto 1-125" min="1" max="125" inputmode="numeric" aria-label="Inserisci il minuto del gol" disabled style="display: none;">
                 
                 <button id="btn-verifica" class="action-button verify-button" style="display: none;">
                     Indovina
                 </button>
 
-                <button id="btn-next" class="action-button next-button">
-                    INIZIA
+                <button id="btn-next" class="action-button next-button full-width-action">
+                    INIZIA LA SFIDA
                 </button>
+                
             </div>
 
-            <div id="risultato-feedback" class="feedback-box" style="display: none;">
+            <div id="risultato-feedback" class="feedback-box" role="status" aria-live="polite" style="display: none;">
                 </div>
 
         </main>
         
         <footer class="score-display">
-            <p>Punteggio Totale: <span id="punteggio-totale">0</span> punti</p>
+            <p>Punteggio totale · <span id="punteggio-totale">0</span> punti</p>
         </footer>
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="data/goals.js?v=2"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
