@@ -1,89 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goal Time Guess — Indovina il minuto</title>
-    <link rel="stylesheet" href="style.css?v=2"> 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1NPPVKYBDE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-1NPPVKYBDE');
-</script>
-    <script>
-// Definisci dataLayer e la funzione gtag.
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-
-// 1. IMPOSTA IL CONSENSO PREDEFINITO AL DENIED (NEGATO) IN MODO GLOBALE.
-// Questo è il requisito di base del GDPR in assenza di un banner.
-gtag('consent', 'default', {
-  'ad_storage': 'denied',
-  'analytics_storage': 'denied',
-  'wait_for_update': 500 // Attende il tempo per un eventuale futuro banner
-});
-
-// 2. Inizializza il tuo Tag GA4
-gtag('js', new Date());
-gtag('config', 'G-1NPPVKYBDE'); 
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quiz sul minuto dei gol: dati verificati, nessuna immagine protetta.">
+  <title>Minuto Giusto — Quiz calcio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="game-container">
-        <header>
-            <div class="brand">
-                <div class="brand-mark" aria-hidden="true">⚽</div>
-                <div>
-                    <p class="eyebrow">Football challenge</p>
-                    <h1 class="logo">GOAL TIME GUESS</h1>
-                </div>
-            </div>
-            <p id="round-counter" class="round-info">Caricamento...</p> 
-        </header>
-
-        <div class="progress-track" role="progressbar" aria-label="Avanzamento partita" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
-            <div id="progress-bar" class="progress-bar"></div>
-        </div>
-        
-        <main class="round-display">
-            
-            <h2 id="descrizione-partita">In attesa di iniziare...</h2>
-            
-            <div class="image-box">
-                <img id="immagine-goal" src="tempo.jpg" alt="Foto di un momento del Goal">
-                <span class="image-badge">INDOVINA IL MINUTO</span>
-            </div>
-
-            <div class="input-area">
-                
-               <input type="number" id="stima-input" placeholder="Minuto 1-125" min="1" max="125" inputmode="numeric" aria-label="Inserisci il minuto del gol" disabled style="display: none;">
-                
-                <button id="btn-verifica" class="action-button verify-button" style="display: none;">
-                    Indovina
-                </button>
-
-                <button id="btn-next" class="action-button next-button full-width-action">
-                    INIZIA LA SFIDA
-                </button>
-                
-            </div>
-
-            <div id="risultato-feedback" class="feedback-box" role="status" aria-live="polite" style="display: none;">
-                </div>
-
-        </main>
-        
-        <footer class="score-display">
-            <p>Punteggio totale · <span id="punteggio-totale">0</span> punti</p>
-        </footer>
-
-    </div>
-
-    <script src="data/goals.js?v=2"></script>
-    <script src="script.js?v=2"></script>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Minuto Giusto, pagina iniziale">
+        <svg class="brand-ball" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><path d="M24 12l8 6-3 10h-10l-3-10zM13 19l6 9m16-9-6 9m-9 0 4 8m4-8-4 8"/></svg>
+        <span><b>MINUTO</b><em>GIUSTO</em></span>
+      </a>
+      <span id="data-status" class="status-pill">VERIFICA DATI</span>
+    </header>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="kicker">Quiz di cultura calcistica</p>
+      <h1 id="hero-title">Sai quando è arrivato<br><span>il gol decisivo?</span></h1>
+      <p class="hero-copy">Niente immagini, niente rumore: solo partite, minuti e memoria calcistica.</p>
+    </section>
+    <section class="scoreboard" aria-label="Tabellone della partita">
+      <div class="scoreboard-top"><span id="competition">ARCHIVIO IN VERIFICA</span><span id="season">STAGIONE —</span></div>
+      <div class="teams"><strong id="home-team">DATI</strong><span class="versus">VS</span><strong id="away-team">IN ARRIVO</strong></div>
+      <div class="goal-type"><svg viewBox="0 0 92 56" role="img" aria-label="Campo astratto"><path d="M3 4h86v48H3zM46 4v48M3 17h18v22H3m86-22H71v22h18M46 21a11 11 0 1 0 0 22"/><circle cx="46" cy="28" r="2"/><path class="shot" d="M30 40 60 17"/></svg><span id="goal-kind">GOL DA CLASSIFICARE</span></div>
+    </section>
+    <section class="round-card" aria-labelledby="round-title">
+      <div class="round-heading"><p id="round-label">PRONTO A GIOCARE</p><h2 id="round-title">Il minuto è ancora da verificare</h2></div>
+      <p id="game-message" class="game-message">Stiamo controllando fonti e licenze prima di pubblicare le sfide. L'allenamento sarà disponibile non appena ci saranno almeno 5 gol verificati.</p>
+      <div class="timeline" aria-label="Linea del tempo della partita"><div class="timeline-labels"><span>1'</span><span>45'</span><span>INTERVALLO</span><span>90'</span><span>120'</span></div><div class="timeline-track"><span class="half first"></span><span class="half second"></span><span class="half extra"></span><i class="break break-one"></i><i class="break break-two"></i><i class="ball-marker" id="ball-marker" aria-hidden="true">⚽</i></div></div>
+      <div class="minute-control"><button id="minus-minute" class="step-button" type="button" aria-label="Riduci di un minuto" disabled>−1</button><label for="minute-range"><span>LA TUA STIMA</span><output id="minute-output" for="minute-range">60'</output></label><button id="plus-minute" class="step-button" type="button" aria-label="Aumenta di un minuto" disabled>+1</button></div>
+      <input id="minute-range" type="range" min="1" max="120" value="60" disabled aria-label="Minuto stimato">
+      <button id="primary-action" class="primary-action" type="button" disabled>DATI IN VERIFICA</button>
+    </section>
+    <section class="trust-row" aria-label="Principi del sito"><span>✓ Dati con fonte</span><span>✓ Senza foto</span><span>✓ Senza scommesse</span></section>
+  </main>
+  <footer><a href="fonti-e-crediti.html">Fonti e crediti</a><span>·</span><a href="privacy.html">Privacy</a><span>·</span><span>Progetto indipendente</span></footer>
+  <script src="data/goals.js"></script><script src="script.js"></script>
 </body>
 </html>
